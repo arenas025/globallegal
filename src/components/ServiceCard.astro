@@ -1,0 +1,62 @@
+
+---
+
+const {title, description} = Astro.props
+---
+
+<article class="service-card">
+    <div class="icon">
+      <img src="/law-icon.svg" alt="Ícono de derecho" />
+    </div>
+    <h2 class="title">{title}</h2>
+    <p class="description">{description}</p>
+    <button class="service-card-button">CONOCE MÁS</button>
+  </article>
+  
+  <style is:global>
+    .service-card {
+      position: relative;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: left;
+      width: 400px;
+      height: 300px;
+
+    }
+  
+    .icon {
+      background: #f4b400;
+      padding: 10px;
+      display: inline-block;
+      border-radius: 4px;
+    }
+  
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+  
+    .description {
+      font-size: 20px;
+      color: #333;
+    }
+  
+    .service-card-button {
+      background: #0e2f1c;
+      color: #f4b400;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      position: absolute;
+      bottom: -15px;
+    }
+  
+    .button:hover {
+      background: #0b2616;
+    }
+  </style>

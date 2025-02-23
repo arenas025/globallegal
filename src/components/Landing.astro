@@ -1,0 +1,190 @@
+---
+import SectionTitle from '../../src/components/SectionTitle.astro';
+import ServiceCard from '../../src/components/ServiceCard.astro';
+import TeamMemberCard from '../../src/components/TeamMemberCard.astro';
+import Footer from '../../src/components/Footer.astro';
+---
+
+<div id="container">
+	<main>
+		<header>
+			<div class="hero-logo">
+				<img src="/logo.svg" alt="global legal logo">
+			  </div>
+			<ul>
+				<li><a href="#service-offering">Nuestros servicios</a></li>
+				<li><a href="#team">Conoce a nuestro equipo</a></li>
+				<li><a href="#contact">Contáctanos</a></li>
+			</ul>
+		</header>
+
+		<section class="hero">
+			<div class="hero-text">
+			  <h1><span>Tu tranquilidad es nuestra prioridad.</span> Protección legal con compromiso y experiencia</h1>
+			  <p>
+				En Global Legal, trabajamos con compromiso y experiencia para brindarte 
+				soluciones legales efectivas, adaptadas a tus necesidades.
+			  </p>
+			  <button class="schedule-button">AGENDA UNA ASESORÍA</button>
+			</div>
+			<div class="hero-image">
+			  <img src="/hero-image.png" alt="Personas firmando documentos legales">
+			</div>
+	    </section>
+
+			<SectionTitle title="Nuestros servicios"/> 
+	 	<section id="service-offering"> 
+			<ServiceCard title="Derecho Corporativo y Empresarial" description="Protegemos los intereses de tu empresa con asesoría en contratos, cumplimiento normativo, propiedad intelectual y más."/>
+
+			<ServiceCard title="Derecho penal" description="Brindamos orientación experta en diversas áreas del derecho para ayudarte a tomar decisiones informadas y estratégicas."/>
+
+			<ServiceCard title="Derecho administrativo" description="Ofrecemos asesoría especializada en derecho administrativo para garantizar decisiones estratégicas y conformes a la normativa vigente."/>
+
+			<ServiceCard title="Derecho Civil y Contratos" description="Redacción, revisión y negociación de contratos, así como representación en disputas civiles y resolución de conflictos." />
+
+			<ServiceCard title="Derecho Laboral y Seguridad Social" description="Asesoría para empleadores y trabajadores en contratos, despidos, indemnizaciones y cumplimiento de normativas laborales."/>
+
+		</section> 
+
+		<SectionTitle title="Conoce a nuestro equipo"/>
+		<section id="team">
+			<TeamMemberCard name="Angie Paola Méndez Tocora"  img={"/angie.png"}/>
+			<TeamMemberCard name="Tatiana Barreto Méndez" img={"/tatiana.png"}/>
+			<TeamMemberCard name="Daniel Montealegre" img={"/daniel.png"}/>
+			<TeamMemberCard name="Laura Xiomara Rojas" img={"/laura.png"}/>
+		</section>
+
+		<section>
+			<SectionTitle title="Contáctanos"/>
+			<Footer/>
+		</section> 
+	</main>
+
+	
+</div>
+
+<style>
+
+	#container {
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+	}
+
+
+	main {
+		height: 100%;
+		display:flex;
+		flex-direction:column;
+		gap: 50px;
+		padding: 32px;
+	}
+
+
+	header{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 16px
+	}
+
+	header ul {
+		display: flex;
+		gap: 20px;
+		list-style-type: none;
+		align-items: center;
+	}
+
+	header ul a {
+		text-decoration: none;
+		color: #1e3d37;
+
+		
+	}
+
+	.hero {
+		display:flex;
+		justify-content:center;
+		gap:20px;
+		list-style: none;
+		color: black
+
+	} 
+
+
+	.hero-text h1 {
+		font-size: 2rem;
+		font-weight: normal;
+		color: #1e3d37;
+		text-decoration: none;
+	} 
+
+	.hero-text h1 span {
+		font-weight: bold;
+	}
+
+	.hero-text span {
+		text-decoration: underline;
+		text-decoration-color: #FFB300;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 3px;
+	} 
+
+	.hero-text p {
+		font-size: 25px;
+		color: #555;
+		margin-top: 15px;
+	}
+
+	.schedule-button {
+		background-color: #f4b63d;
+		color: black;
+		font-size: 1rem;
+		font-weight: bold;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 5px;
+		margin-top: 20px;
+		cursor: pointer;
+	}
+
+	.schedule-button:hover {
+		background-color: #e6a832;
+	}
+
+	.hero-image {
+		width: 594px;
+		height: 891px;
+	}
+
+
+	.hero-image img {
+		width: 100%;
+		height: 80%;
+		border-radius: 5px;
+	}
+
+	#service-offering {
+	  display: flex;
+	  width: 100%;
+	  justify-content: center;
+	  flex-wrap: wrap;
+	  gap: 20px
+	}
+
+	#team {
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		gap: 32px;
+		padding: 32px;
+	}
+
+
+	@media (max-width: 480px){
+		.hero {
+			flex-direction: column;
+		}
+	}
+
+
+
+</style>
