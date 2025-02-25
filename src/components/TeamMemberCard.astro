@@ -6,11 +6,7 @@ const {name, img, description} = Astro.props;
     <div class="card-text">
       <div class="name">{name}</div>
       <p>
-        Abogada especialista en derecho procesal civil, con experiencia en procesos civiles, 
-        de familia, procesos policivos y acciones constitucionales.
-      </p>
-      <p>
-        Su compromiso y conocimiento la convierten en una aliada clave para la defensa de tus derechos.
+        {description}
       </p>
     </div>
     <div class="card-image">
@@ -26,6 +22,7 @@ const {name, img, description} = Astro.props;
     border-radius: 8px;
     height: auto;
     width: 70%;
+    height: 350px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
@@ -35,14 +32,19 @@ const {name, img, description} = Astro.props;
     padding: 20px;
     position: relative;
     flex: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .name {
     background-color: #f4b63d;
     color: black;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 20px;
-    padding: 5px 10px;
+    padding: 15px;
     display: inline-block;
     position: absolute;
     top: -16px;
@@ -65,6 +67,7 @@ const {name, img, description} = Astro.props;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position:top;
     border-radius: 0 8px 8px 0;
   }
 

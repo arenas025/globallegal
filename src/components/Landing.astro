@@ -7,7 +7,7 @@ import Footer from '../../src/components/Footer.astro';
 
 <div id="container">
 	<main>
-		<header>
+		<header class="header">
 			<div class="hero-logo">
 				<img width="200" height="40" src="/logo.svg" alt="global legal logo">
 			  </div>
@@ -25,7 +25,9 @@ import Footer from '../../src/components/Footer.astro';
 				En Global Legal, trabajamos con compromiso y experiencia para brindarte 
 				soluciones legales efectivas, adaptadas a tus necesidades.
 			  </p>
-			  <button class="schedule-button">AGENDA UNA ASESORÍA</button>
+				<a style="text-decoration: none; color: black;" target="_blank" href=" https://wa.me/573204541872?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20asesor%C3%ADa%20legal.%20%C2%BFPodr%C3%ADan%20brindarme%20informaci%C3%B3n%20sobre%20disponibilidad%20y%20costos%3F">
+			  <button class="schedule-button"> AGENDA UNA ASESORÍA</button>
+								</a>
 			</div>
 			<div class="hero-image">
 			  <img src="/hero-image.png" alt="Personas firmando documentos legales">
@@ -48,10 +50,10 @@ import Footer from '../../src/components/Footer.astro';
 
 		<SectionTitle title="Conoce a nuestro equipo"/>
 		<section id="team">
-			<TeamMemberCard name="Angie Paola Méndez Tocora"  img={"/angie.png"}/>
-			<TeamMemberCard name="Tatiana Barreto Méndez" img={"/tatiana.png"}/>
-			<TeamMemberCard name="Daniel Montealegre" img={"/daniel.png"}/>
-			<TeamMemberCard name="Laura Xiomara Rojas" img={"/laura.png"}/>
+			<TeamMemberCard description="Abogada especialista en derecho procesal civil, con amplia experiencia en procesos civiles, de familia, procesos policivos y acciones constitucionales. Su compromiso y conocimiento la convierten en una aliada clave para la defensa de tus derechos." name="Angie Paola Méndez Tocora"  img={"/angie.png"}/>
+			<TeamMemberCard name="Tatiana Barreto Méndez" description="Abogada Especialista en derecho público, con experiencia en demandas ejecutivas, ayudándote a recuperar tu dinero de manera efectiva. Además, cuenta con amplia trayectoria en procesos constitucionales y un sólido enfoque en derecho de tránsito y transporte. Su conocimiento y compromiso la convierten en una excelente aliada para la defensa de tus derechos." img={"/tatiana.png"}/>
+			<TeamMemberCard name="Daniel Montealegre" description="Abogado especialista en Derecho Público de la Universidad Externado de Colombia, con una destacada trayectoria como asesor jurídico de entidades a nivel nacional y municipal. Su experiencia abarca litigios contra el Estado, procesos policivos, derecho urbanístico, disciplinario, contractual y civil. Su amplio conocimiento en estas áreas lo convierte en un defensor estratégico y comprometido con la justicia." img={"/daniel.png"}/>
+			<TeamMemberCard name="Laura Xiomara Rojas" description="Abogada con más de seis años de experiencia en trámites y procesos derivados de accidentes de tránsito, así como en reclamaciones ante compañías de seguros. Su amplio conocimiento en derecho de seguros, junto con su trayectoria en procedimientos de derecho laboral y seguridad social, la convierten en una aliada clave para la defensa de tus derechos." img={"/laura.png"}/>
 		</section>
 
 		<section id="contact">
@@ -69,13 +71,22 @@ import Footer from '../../src/components/Footer.astro';
 		font-family: Lora, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 	}
 
+	.header{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		background-color: white;
+		padding: 16px;
+	}
+
 
 	main {
 		height: 100%;
 		display:flex;
 		flex-direction:column;
-		gap: 50px;
-		padding: 32px;
+		padding: 32px 0px;
 	}
 
 
@@ -83,6 +94,10 @@ import Footer from '../../src/components/Footer.astro';
 		display:flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	#contact{
+		padding: 0px 50px;
 	}
 
 	header ul {
@@ -103,9 +118,14 @@ import Footer from '../../src/components/Footer.astro';
 		display:flex;
 		justify-content:center;
 		gap:20px;
+		height: calc(100vh - 50px);
 		list-style: none;
-		color: black
-
+		color: black;
+		background-image: url("/background-hero.png");
+		background-size:auto;
+		background-position: left;
+		background-repeat: no-repeat;
+		align-items: center;
 	} 
 
 	
@@ -158,19 +178,23 @@ import Footer from '../../src/components/Footer.astro';
 
 	.hero-image {
 		width: 594px;
-		height: 891px;
+		height: 80%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 
 	.hero-image img {
 		width: 100%;
-		height: 80%;
+		height: 100%;
 		border-radius: 5px;
 	}
 
 	#service-offering {
 	  display: flex;
-	  width: 100%;
+	  width: 95%;
+		scroll-margin-top: 190px;
 	  justify-content: center;
 	  flex-wrap: wrap;
 	  gap: 20px
@@ -182,6 +206,7 @@ import Footer from '../../src/components/Footer.astro';
 		align-items:center;
 		gap: 32px;
 		padding: 32px;
+		scroll-margin-top: 190px;
 	}
 
 
