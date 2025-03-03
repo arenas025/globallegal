@@ -154,4 +154,59 @@
   .contact-button:hover {
     background-color: #333;
   }
+
+  @media (max-width: 480px){
+    .contact-section{
+      flex-direction: column;
+      padding: 0px 10px;
+    }
+
+    .contact-info{
+      max-width: 100%;
+    }
+
+    .contact-info>p{
+      font-size: 16px;
+      margin-top: 0px;
+    }
+
+    .contact-info > a> p{
+      font-size: 14px;
+      width: 90%;
+    }
+
+    .contact-info > a> img{
+      width: 20px;
+      height: 20px;
+    }
+
+    .contact-form{
+      max-width: 100%;
+      padding: 0px 20px;
+      padding-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .contact-form > h3{
+      font-size: 20px;
+    }
+
+    .contact-form > p{
+      font-size: 16px;
+    }
+
+    .contact-form > form{
+      width: 100%;
+    }
+
+    .contact-form > form > .contact-input-group{
+      flex-direction: column;
+    }    
+
+    .input-text-area{
+      height: 80px;
+      width: 280px;
+    }
+    
+  }
 </style>

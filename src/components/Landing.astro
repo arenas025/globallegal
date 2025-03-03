@@ -20,7 +20,7 @@ import Footer from '../../src/components/Footer.astro';
 
 		<section class="hero">
 			<div class="hero-text">
-			  <h1><span>Tu tranquilidad es nuestra prioridad.</span> Protección legal con compromiso y experiencia</h1>
+			  <h1><br><span>Tu tranquilidad es nuestra prioridad.</span> <br> Protección legal con compromiso y experiencia</h1>
 			  <p>
 				En Global Legal, trabajamos con compromiso y experiencia para brindarte 
 				soluciones legales efectivas, adaptadas a tus necesidades.
@@ -213,6 +213,74 @@ import Footer from '../../src/components/Footer.astro';
 	@media (max-width: 480px){
 		.hero {
 			flex-direction: column;
+			margin-top: 10px;
+			width: 100%;
+			background-position: center;
+			background-size: contain;
+		}
+
+		.hero-text{
+			width: 100%;
+			text-align: center;
+		}
+
+		.hero-text>a>button{
+			font-size: 14px;
+		}
+
+		.hero-text > p{
+			font-size: 14px;
+			width: 70%;
+			margin: 30px auto;
+
+		}
+
+		.hero-text > h1{
+
+			font-size: 25px;
+			width: 70%;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.hero-text > h1 > span{
+			font-size: 30px;
+		}
+
+		.hero-image{
+			display: none;
+		}
+
+		.header > ul{
+			display: none;
+		}
+
+		.hero-logo{
+			width: 150px;
+		}
+
+		.hero-logo img {
+			width: 100%;
+		}
+
+		#service-offering{
+			width: 100%;
+			margin-bottom: 50px;
+		}
+
+		#team{
+			width: 100%;
+			padding: 0px;
+			display: flex;
+			gap: 30px;
+			margin-top: 10px;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#contact{
+			margin-top: 20px;
+			padding: 0px 10px;
 		}
 	}
 

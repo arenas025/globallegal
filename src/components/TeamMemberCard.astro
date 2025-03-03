@@ -10,7 +10,8 @@ const {name, img, description} = Astro.props;
       </p>
     </div>
     <div class="card-image">
-      <img src={img} alt="Angie Paola Méndez Tocora">
+      <div class="name">{name}</div>
+      <img src={img} alt="Nombre del miembro del equipo">
     </div>
 </article>
 
@@ -74,21 +75,51 @@ const {name, img, description} = Astro.props;
 
   @media (max-width: 480px) {
     .card-image {
-      height: 200px;
+      height: 120px;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .card{
+    display: flex;
+    width: 90%;
+    height: 300px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
     }
 
     .card-text {
-      padding: 25px 15px 15px;
+      padding: 0px 15px;
+      flex: 1;
+      height: 300px;
     }
+
+    .card-text > .name {
+      display: none;
+    }
+
+    .card-image > .name{
+    }
+
+    .card-image > img{
+      height: 120px;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 5px 5px 0px 0px;
+    }
+
 
     .name {
       font-size: 16px;
       padding: 4px 8px;
+      top: -10px;
+      left: -10px;
     }
 
     .card-text p {
-      font-size: 13px;
-      margin-top: 12px;
+      font-size: 12px;
     }
   }
 </style>
