@@ -1,0 +1,87 @@
+.service-card {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  width: 400px;
+  min-height: 250px;
+  height: max-content;
+  font-family: "Roboto", sans-serif;
+}
+  
+
+.icon {
+  background: #f4b400;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 20px;
+  color: #333;
+}
+
+.service-card-button {
+  background: #0e2f1c;
+  color: #f4b400;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  position: absolute;
+  bottom: -15px;
+  transition: scale 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.service-card-button:hover {
+  background: #0b2616;
+  scale: 1.05;
+  transition: scale 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    width: 80%;
+    min-height: 160px;
+    height: fit-content;
+  }
+
+  .icon {
+    width: 30px;
+    display: flex;
+    height: 30px;
+  }
+
+  .more-info {
+    font-size: 12px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .service-card-button {
+    font-size: 12px;
+  }
+}

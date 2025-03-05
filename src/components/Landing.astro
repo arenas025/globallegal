@@ -1,22 +1,14 @@
 ---
 import SectionTitle from '../../src/components/SectionTitle.astro';
-import ServiceCard from '../../src/components/ServiceCard.astro';
+import ServiceCard from './ServiceCard.js';
 import TeamMemberCard from '../../src/components/TeamMemberCard.astro';
 import Footer from '../../src/components/Footer.astro';
+import Header from './Header.tsx';
 ---
 
 <div id="container">
 	<main>
-		<header class="header">
-			<div class="hero-logo">
-				<img width="200" height="40" src="/logo.svg" alt="global legal logo">
-			  </div>
-			<ul>
-				<li><a href="#service-offering">Nuestros servicios</a></li>
-				<li><a href="#team">Conoce a nuestro equipo</a></li>
-				<li><a href="#contact">Contáctanos</a></li>
-			</ul>
-		</header>
+	<Header/>
 
 		<section class="hero">
 			<div class="hero-text">
@@ -36,15 +28,179 @@ import Footer from '../../src/components/Footer.astro';
 
 			<SectionTitle title="Nuestros servicios"/> 
 	 	<section id="service-offering"> 
-			<ServiceCard title="Derecho Corporativo y Empresarial" description="Protegemos los intereses de tu empresa con asesoría en contratos, cumplimiento normativo, propiedad intelectual y más."/>
 
-			<ServiceCard title="Derecho penal" description="Brindamos orientación experta en diversas áreas del derecho para ayudarte a tomar decisiones informadas y estratégicas."/>
+			<ServiceCard services={[
+  {
+    "title": "Constitución de Empresas",
+    "description": "Asesoría para registrar y formalizar tu negocio según la normativa vigente."
+  },
+  {
+    "title": "Contratos Comerciales",
+    "description": "Redacción y revisión de contratos para proteger tus intereses comerciales."
+  },
+  {
+    "title": "Fusiones y Adquisiciones",
+    "description": "Asistencia legal en procesos de compra, venta o fusión de empresas."
+  },
+  {
+    "title": "Propiedad Intelectual",
+    "description": "Registro de marcas, patentes y derechos de autor para proteger tus creaciones."
+  },
+  {
+    "title": "Cumplimiento Normativo",
+    "description": "Evita sanciones manteniendo tu empresa al día con las regulaciones legales."
+  },
+  {
+    "title": "Asesoría en Startups",
+    "description": "Soluciones legales personalizadas para emprendedores."
+  }
+]} 
+			client:only="react" 
+			title="Derecho Corporativo y Empresarial" 
+			description="Protegemos los intereses de tu empresa con asesoría en contratos, cumplimiento normativo, propiedad intelectual y más." icon={"/docs.svg"}/>
 
-			<ServiceCard title="Derecho administrativo" description="Ofrecemos asesoría especializada en derecho administrativo para garantizar decisiones estratégicas y conformes a la normativa vigente."/>
+			<ServiceCard
+			client:only="react" 
+			services={[
+  {
+    title: "Delitos Menores y Graves",
+    description: "Defensa ante acusaciones penales de cualquier nivel."
+  },
+  {
+    title: "Asistencia en Detenciones",
+    description: "Acompañamiento inmediato tras arrestos para proteger tus derechos."
+  },
+  {
+    title: "Violencia Doméstica",
+    description: "Defensa y representación en casos de violencia intrafamiliar."
+  },
+  {
+    title: "Delitos Económicos y Financieros",
+    description: "Asesoría en acusaciones de fraude, lavado de dinero y otros delitos financieros."
+  },
+  {
+    title: "Apelaciones y Recursos",
+    description: "Si la sentencia no fue favorable, luchamos por tu libertad a través de recursos legales."
+  },
+  {
+    title: "Juicios Orales",
+    description: "Defensa estratégica y eficaz en juicios penales."
+  }
+]}
+			title="Derecho penal"
+			description="Brindamos orientación experta en diversas áreas del derecho para ayudarte a tomar decisiones informadas y estratégicas."
+			icon={"/legal-icon.svg"}/>
 
-			<ServiceCard title="Derecho Civil y Contratos" description="Redacción, revisión y negociación de contratos, así como representación en disputas civiles y resolución de conflictos." />
+			<ServiceCard
+			services={[
+  {
+    title: "Permisos de Uso de Suelo",
+    description: "Te ayudamos a obtener o regularizar permisos para tus propiedades."
+  },
+  {
+    title: "Multas y Sanciones Administrativas",
+    description: "Defensa ante sanciones impuestas por autoridades locales o nacionales."
+  },
+  {
+    title: "Licencias Comerciales",
+    description: "Asesoría en la obtención de licencias para iniciar o expandir negocios."
+  },
+  {
+    title: "Contratos con el Estado",
+    description: "Asistencia en procesos de licitación y contratación pública."
+  },
+  {
+    title: "Recursos Administrativos",
+    description: "Impugnación de actos administrativos que afecten tus intereses."
+  },
+  {
+    title: "Defensa en Procesos Administrativos Disciplinarios",
+    description: "Asesoría y defensa ante procedimientos por faltas administrativas."
+  },
+  {
+    title: "Multas de Tránsito",
+    description: "Eliminar después de término de prescripción, impugnar ante las entidades."
+  }
+]}
+			client:only="react"
+			title="Derecho administrativo"
+			description="Ofrecemos asesoría especializada en derecho administrativo para garantizar decisiones estratégicas y conformes a la normativa vigente."
+			icon={"/docs.svg"}/>
 
-			<ServiceCard title="Derecho Laboral y Seguridad Social" description="Asesoría para empleadores y trabajadores en contratos, despidos, indemnizaciones y cumplimiento de normativas laborales."/>
+			<ServiceCard
+			services={[
+  {
+    title: "Divorcios y Separaciones",
+    description: "Procesos legales claros y respetuosos para transiciones familiares."
+  },
+  {
+    title: "Custodia y Régimen de Visitas",
+    description: "Defendemos tus derechos y el bienestar de tus hijos."
+  },
+  {
+    title: "Herencias y Testamentos",
+    description: "Te ayudamos a proteger tu legado y a evitar conflictos familiares."
+  },
+  {
+    title: "Arrendamientos y Desalojos",
+    description: "Asistencia en contratos de alquiler, renovaciones y desalojos legales."
+  },
+  {
+    title: "Responsabilidad Civil",
+    description: "Reclamaciones por daños y perjuicios, accidentes y negligencias."
+  },
+  {
+    title: "Contratos Civiles",
+    description: "Redacción y revisión de acuerdos para proteger tus intereses."
+  },
+  {
+    title: "Préstamos",
+    description: "Estudio de bienes para préstamos, asesoría en la correcta redacción de letras de cambio y demandas por préstamos en mora."
+  },
+  {
+    title: "Accidentes de Tránsito",
+    description: "Reclamaciones ante aseguradoras y demandas por incumplimiento de pago."
+  },
+  {
+    title: "Demandas por Mala Praxis",
+    description: "Asesoría y representación legal en casos donde un servicio médico te haya perjudicado."
+  }
+]}
+			client:only="react"
+			title="Derecho Civil y Contratos"
+			description="Redacción, revisión y negociación de contratos, así como representación en disputas civiles y resolución de conflictos."
+			icon={"/briefcase.png"}/>
+
+			<ServiceCard 
+			services={
+				[
+  {
+    title: "Despidos Injustificados",
+    description: "Defendemos tus derechos si perdiste tu empleo sin justificación."
+  },
+  {
+    title: "Reclamaciones Salariales",
+    description: "Ayuda para obtener el pago de sueldos, horas extras o prestaciones adeudadas."
+  },
+  {
+    title: "Acoso y Discriminación Laboral",
+    description: "Representación en casos de trato injusto o discriminatorio."
+  },
+  {
+    title: "Negociación de Contratos de Trabajo",
+    description: "Revisión de contratos para asegurar condiciones laborales justas."
+  },
+  {
+    title: "Accidentes Laborales",
+    description: "Reclamaciones por accidentes y enfermedades relacionadas con el trabajo."
+  },
+  {
+    title: "Visas de Trabajo y Migración Laboral",
+    description: "Apoyo en trámites migratorios para trabajadores nacionales y extranjeros."
+  }
+]
+			}
+			client:only="react" title="Derecho Laboral y Seguridad Social" description="Asesoría para empleadores y trabajadores en contratos, despidos, indemnizaciones y cumplimiento de normativas laborales." icon={"/law-icon.svg"}/>
 
 		</section> 
 
@@ -90,28 +246,9 @@ import Footer from '../../src/components/Footer.astro';
 	}
 
 
-	header{
-		display:flex;
-		justify-content: space-between;
-		align-items: center;
-	}
 
 	#contact{
 		padding: 0px 50px;
-	}
-
-	header ul {
-		display: flex;
-		gap: 20px;
-		list-style-type: none;
-		align-items: center;
-	}
-
-	header ul a {
-		text-decoration: none;
-		color: #1e3d37;
-
-		
 	}
 
 	.hero {
@@ -170,10 +307,14 @@ import Footer from '../../src/components/Footer.astro';
 		border-radius: 5px;
 		margin-top: 20px;
 		cursor: pointer;
+		transition: scale 0.3s ease-in-out;
 	}
 
 	.schedule-button:hover {
 		background-color: #e6a832;
+		scale: 1.05;
+		transition: scale 0.3s ease-in-out;
+		transform-origin: center;
 	}
 
 	.hero-image {
@@ -251,16 +392,20 @@ import Footer from '../../src/components/Footer.astro';
 			display: none;
 		}
 
-		.header > ul{
-			display: none;
-		}
-
 		.hero-logo{
-			width: 150px;
+			width:100% ;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 
 		.hero-logo img {
-			width: 100%;
+			width: 150px;
+		}
+
+		.hero-logo img:last-child{
+			width: 20px;
+			height: 20px;
 		}
 
 		#service-offering{

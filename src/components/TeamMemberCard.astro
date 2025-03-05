@@ -17,19 +17,28 @@ const {name, img, description} = Astro.props;
 
 <style is:global>
   .card {
+    transition: scale 0.3s ease-in-out;
+    transform-origin: center;
     position: relative;
     display: flex;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 5px;
     height: auto;
     width: 70%;
     height: 350px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
+  .card:hover {
+    scale: 1.05;
+    transition: scale 0.3s ease-in-out;
+    transform-origin: center;
+  }
+
   .card-text {
     background-color: #1e3d37;
     color: white;
+    border-radius: 0px 0px 0px 5px;
     padding: 20px;
     position: relative;
     flex: 1;
@@ -42,6 +51,7 @@ const {name, img, description} = Astro.props;
 
   .name {
     background-color: #f4b63d;
+    border-radius: 5px;
     color: black;
     font-weight: normal;
     font-size: 20px;
@@ -69,14 +79,14 @@ const {name, img, description} = Astro.props;
     height: 100%;
     object-fit: cover;
     object-position:top;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 6px 6px 0;
   }
 
 
   @media (max-width: 480px) {
     .card-image {
       height: 120px;
-      border-radius: 5px;
+      border-radius: 6px;
       width: 100%;
     }
 
@@ -107,7 +117,7 @@ const {name, img, description} = Astro.props;
       width: 100%;
       object-fit: cover;
       object-position: top;
-      border-radius: 5px 5px 0px 0px;
+      border-radius: 6px 6px 0px 0px;
     }
 
 
