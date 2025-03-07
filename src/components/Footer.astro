@@ -1,35 +1,52 @@
 <div class="contact-section">
     <div class="contact-info">
       <p>Si tienes alguna duda, llena el formulario o contáctanos por nuestras redes sociales</p>
-      <a target="_blank" href="https://wa.me/573164487881?text=Hola,%20tengo%20algunas%20dudas%20sobre%20sus%20servicios%20legales%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n.%20%C2%BFPodr%C3%ADan%20ayudarme%3F">
+      <a target="_blank" href="https://wa.me/573016196402?text=Hola,%20tengo%20algunas%20dudas%20sobre%20sus%20servicios%20legales%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n.%20%C2%BFPodr%C3%ADan%20ayudarme%3F">
         <img src="/whatsapp.svg" alt="phone">
         <p>320 454 1872</p>
       </a>
       <a href="https://www.instagram.com/globallegal24" target="_blank">
-        <img src="/instagram.svg" alt="phone">
+        <img src="/instagram.svg" alt="instagram">
         <p>@globallegal24</p>
       </a>
       <a href="https://www.google.com/maps/place/Global+Legal+24/@5.069543,-75.199999,15z/data=!4m2!3m1!1s0x8e476f8c7c79869f:0x42a29bb6c46e44e4">
-        <img src="/maps.svg" alt="phone">
+        <img src="/maps.svg" alt="location">
         <p>Carrera 3 # 8-39 Edificio  Escorial, oficina x5 Ibagué-Tolima</p>
+      </a>
+        <a href="mailto:global.legalabogados24@gmail.com">
+        <img src="/email.svg" alt="email">
+        <p>global.legalabogados24@gmail.com</p>
       </a>
     </div>
   
     <div class="contact-form">
       <h3 style="margin-bottom: 0px;">Comunícate con nosotros</h3>
       <p style="margin-top: 0px; margin-bottom: 30px;">Escríbenos y solucionaremos tus dudas</p>
-      <form>
+      <form >
         <div class="contact-input-group">
-          <input type="text" placeholder="Nombre">
-          <input type="email" placeholder="Email">
+          <input name='name' type="text" placeholder="Nombre">
+          <input name='email' type="email" placeholder="Email">
         </div>
-        <textarea class="input-text-area" placeholder="¿Cómo podemos ayudarte?"></textarea>
+        <textarea name='message' class="input-text-area" placeholder="¿Cómo podemos ayudarte?"></textarea>
         <button class="contact-button" type="submit">Enviar</button>
       </form>
     </div>
   </div>
-  
 
+  <script>
+    const form = document.querySelector('form');
+    if(form){
+      
+      // action="https://formsubmit.co/1b18a0bce37613ec213b26aa9e3bd386"
+    form.addEventListener('submit', (e) => {
+      form.action = "https://formsubmit.co/1b18a0bce37613ec213b26aa9e3bd386";
+      form.method = "POST";
+      form.submit();
+      
+      e.preventDefault();
+    });
+    }
+  </script>
 <style>
 
   .contact-section {
@@ -173,6 +190,7 @@
     .contact-info > a> p{
       font-size: 14px;
       width: 90%;
+      cursor: pointer;
     }
 
     .contact-info > a> img{

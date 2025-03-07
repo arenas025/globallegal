@@ -15,11 +15,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
+
 
 .hero-logo img:first-child {
   width: 200px;
   height: 40px;
+  object-fit: cover;
 }
 
 .hero-logo img:last-child {
@@ -36,9 +39,18 @@ header ul {
 	header ul a {
 		text-decoration: none;
 		color: #1e3d37;
-
-		
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+    transition: all 0.3s ease-in-out;
 	}
+
+  header ul a:hover {
+    padding: 0px 10px;
+    border-bottom: 2px solid #f4b400;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
 
 
 .header ul a {
@@ -56,11 +68,60 @@ header ul {
     }
 
   .hero-logo img:first-child {
-    width: 60%;
+    width:200px;
+    object-fit: contain;
   }
   
   .hero-logo img:last-child {
     display: block;
     padding-right: 10px;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+    background-color: white;
+    right: 0;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  20px;
+    border-bottom: 1px solid rgb(197, 197, 197);
+  }
+
+  .menu-overlay-header img {
+    width: 200px;
+    object-fit: cover;
+  }
+
+  .menu-overlay-header p {
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
+    padding-right: 20px;
+    margin:0px;
+  }
+
+
+  .menu-overlay ul {
+    padding: 0px;
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: column;
+    gap: 20px;
+    margin:auto;
+    align-self: center;
+    list-style-type: none;
+    align-items: center;
   }
 }

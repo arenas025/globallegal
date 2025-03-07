@@ -9,6 +9,7 @@
   min-height: 250px;
   height: max-content;
   font-family: "Roboto", sans-serif;
+  cursor:pointer
 }
   
 
@@ -36,12 +37,12 @@
 }
 
 .service-card-button {
+  cursor: pointer;
   background: #0e2f1c;
   color: #f4b400;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   margin-top: 10px;
   position: absolute;
   bottom: -15px;
@@ -51,6 +52,7 @@
 
 .service-card-button:hover {
   background: #0b2616;
+  cursor:pointer;
   scale: 1.05;
   transition: scale 0.3s ease-in-out;
   transform-origin: center;
