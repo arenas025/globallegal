@@ -1,6 +1,42 @@
+---
+import { SEO } from "astro-seo";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
+	<SEO
+  title="Global Legal | Abogados en Ibagué - Derecho Civil, Penal, Empresarial y Laboral"
+  description="Bufete de abogados en Ibagué, Tolima. Expertos en derecho civil, penal, administrativo, empresarial y laboral. Asesoría legal confiable y efectiva para personas y empresas."
+  openGraph={{
+    basic: {
+      title: "Global Legal | Asesoría Jurídica en Ibagué",
+      type: "website",
+      image: "https://globallegal24.com/logo.svg",
+    }
+  }}
+  extend={{
+    link: [{ rel: "icon", href: "/favicon.ico" }],
+    meta: [
+      {
+        name: "og:image",
+        content: "https://globallegal24.com/logo.svg",
+      },
+      { name: "og:title", content: "Global Legal | Abogados en Ibagué" },
+      { 
+        name: "og:description", 
+        content: "Abogados especialistas en derecho civil, penal, empresarial y laboral. Asesoría confiable en Ibagué, Tolima."
+      },
+      { name: "og:locale", content: "es_CO" },
+      { name: "og:type", content: "website" },
+      { name: "og:site_name", content: "Global Legal" },
+      { name: "og:see_also", content: "https://www.instagram.com/globallegal24/" },
+    ],
+  }}
+/>
+
+
+
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
