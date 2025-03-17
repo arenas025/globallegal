@@ -5,6 +5,13 @@ import { SEO } from "astro-seo";
 <!doctype html>
 <html lang="en">
 	<head>
+  <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<SEO
   title="Global Legal | Abogados en Ibagué - Derecho Civil, Penal, Empresarial y Laboral"
   description="Bufete de abogados en Ibagué, Tolima. Expertos en derecho civil, penal, administrativo, empresarial y laboral. Asesoría legal confiable y efectiva para personas y empresas."
@@ -34,17 +41,7 @@ import { SEO } from "astro-seo";
     ],
   }}
 />
-
-
-
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<title>Global legal</title>
+	
 	</head>
 	<body>
 		<slot />

@@ -22,21 +22,22 @@ const ServiceCard = ({
       </div>
       <h2 className="title">{title}</h2>
       <p className="description">{description}</p>
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{
-              opacity: 0,
-              y: -20,
-              transition: { duration: 0.15, ease: "easeInOut" },
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{
+              duration: 0.4,
+              ease: "easeInOut",
             }}
             className="more-info"
           >
             {services.map((service) => (
-              <ul>
-                <li key={service.title}>
+              <ul key={service.title}>
+                <li>
                   <b>{service.title}</b>: {service.description}
                 </li>
               </ul>
@@ -44,6 +45,7 @@ const ServiceCard = ({
           </motion.div>
         )}
       </AnimatePresence>
+
       <button
         className="service-card-button"
         onClick={() => setIsOpen(!isOpen)}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
+import { AnimatePresence, motion } from "motion/react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,25 +27,34 @@ const Header = () => {
           <a href="#contact">Contáctanos</a>
         </li>
       </ul>
-      {isMenuOpen && (
-        <div className="menu-overlay">
-          <div className="menu-overlay-header">
-            <img src="/logo.svg" alt="global legal logo" />
-            <p onClick={() => setIsMenuOpen(false)}>x</p>
-          </div>
-          <ul>
-            <li>
-              <a href="#service-offering">Nuestros servicios</a>
-            </li>
-            <li>
-              <a href="#team">Conoce a nuestro equipo</a>
-            </li>
-            <li>
-              <a href="#contact">Contáctanos</a>
-            </li>
-          </ul>
-        </div>
-      )}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeInOut",
+              stiffness: 100,
+              type: "spring",
+            }}
+            className="menu-overlay"
+          >
+            <ul>
+              <li>
+                <a href="#service-offering">Nuestros servicios</a>
+              </li>
+              <li>
+                <a href="#team">Conoce a nuestro equipo</a>
+              </li>
+              <li>
+                <a href="#contact">Contáctanos</a>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

@@ -58,7 +58,7 @@
   transform-origin: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .service-card {
     width: 80%;
     min-height: 160px;
