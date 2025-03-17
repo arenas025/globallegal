@@ -15,11 +15,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
 }
 
 
-.hero-logo img:first-child {
+.hero-logo  img:first-child {
   width: 200px;
   height: 40px;
   object-fit: cover;
